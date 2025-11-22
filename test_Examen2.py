@@ -9,7 +9,7 @@ class TestMiClase(unittest.TestCase):
     # PRUEBA 1 assertGreater 
     def test_valencia_mayor_que_cero(self):
         resultado = self.obj.ObtieneValencia(13579) 
-        self.assertGreater(resultado, 0)
+        self.assertGreater(resultado, 11) #Cambio para que falle la prueba 
 
     # PRUEBA 2 assertIsNone
     def test_mas_bailable_lista_vacia(self):
