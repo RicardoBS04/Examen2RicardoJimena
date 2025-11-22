@@ -42,6 +42,13 @@ class MiClase:
             if song is None:
                 return False
         return True
+    
+    def Encuentra(self, lista, elemento):
+        for item in lista:
+            if not isinstance(item, int):
+                raise ValueError("La lista debe contener solo enteros")
+
+        return elemento in lista
 
 
 ################################################################################################
@@ -52,3 +59,5 @@ print(objeto.ObtieneValencia(1234567))       # Esperado: 4
 print(objeto.DivisibleTempo(10))             # Esperado: [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Esperado: 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Esperado: True
+print(objeto.Encuentra([1, 2, 3, 4, 5], 3))   # Esperado: True
+print(objeto.Encuentra([1, 2, 'tres', 4, 5], 3))  # Esperado: ValueError
